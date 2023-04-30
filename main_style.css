@@ -1,0 +1,317 @@
+/*main body */
+body {
+    background-image: url("/background/cityai.png");
+    margin-top: 50px;
+}
+/*main page containers*/
+.containers {
+    width:50%;    
+    margin-left: 10px;
+    margin-right: 30px; 
+}
+/*the left container with my name on it*/
+#main_container {
+    display: flex; 
+    flex-direction: row;
+    justify-content:center;
+    width:100%;
+}
+/*image with text container*/
+#image_container {
+    margin-left: 40%;
+    display: flex;
+    flex-direction: row;
+
+}
+/*image with text block*/
+.blocks {
+    align-items: center;
+    object-fit: contain;
+    margin-left: -60px;
+    margin-right: 30px;
+    
+}
+.blocks:hover {
+    font-size: 40px;
+}
+
+/*each image displayed on the main page*/
+.image{
+    margin-top: 5px;
+    width: 300px;
+    height:370px;
+    border-radius: 7px;
+    
+}
+
+#arts, #personal {
+    display: none;
+}
+/*my name*/
+#name {
+    font-size: 40px;
+}
+/*description of what this page is about*/
+.main_description{
+    text-align: center;
+    /*making the text glow with some help from the outside*/
+    animation: flicker 1.5s infinite alternate;
+    color:rgba(176, 245, 190, 0.716);
+}
+
+/* Flickering animation (with help from the web) */
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+/*slide show with the different areas in my life*/
+#slide_show {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+}
+/*buttons to move between images*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    animation: flicker 1.5s infinite alternate;
+    color:rgba(176, 245, 190, 0.716);
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+.prev {
+    margin-left: 120px;
+}
+
+/* Position the "next button" to the right */
+  .next {
+    right: 100px;
+    border-radius: 3px 0 0 3px;
+    color:#ffffff;
+    
+  }
+/* Color change of prev and next arrows when we hover over them*/
+.prev:hover {
+    color:#ffffff;
+}
+.next:hover {
+    color:#000000;
+}
+/*legend text*/
+.legend {
+    animation: flicker 1.5s infinite alternate;
+    color:rgba(255, 255, 255, 0.716);
+    font-family: "Vibur", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: #7b797956;
+    border-radius: 10px;
+}
+/**From this point forward the css belongs to the arts page**/
+/*hide all sections on plain sight*/
+#arts_page,#professional_page,#personal_page {
+    display: none;
+    flex-direction: column;
+}
+/*Display images*/
+.collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    gap: 5px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+/*main title with glow effect*/
+  .description {
+    height:50px;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #fe9413,
+              0 0 0.8rem #fe9813,
+              0 0 2.8rem #028192,
+              inset 0 0 1.3rem #117d98;
+  }
+/*the container of the images wich includes a neon border to it and organizes all the images*/
+  .collage {
+    background-color: rgba(217, 242, 209, 0.243);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    align-items: stretch;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #fe9413,
+              0 0 0.8rem #fe9813,
+              0 0 2.8rem #028192,
+              inset 0 0 1.3rem #117d98;
+  }
+/*max size of the images inside the collage*/
+  .collage img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+/*refers to the description text below the title*/
+  .text_box {
+    margin-left: 45%;
+    width:200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*flickering animation to the main title*/
+.pages_header{
+    text-align: center;
+    font-size:70px;
+    /*making the text glow with some help from the outside*/
+    animation: flicker 3.5s infinite alternate;
+    color:rgba(247, 169, 59, 0.716);
+}
+/*text inside the box*/
+.page_text {
+    text-align: center;
+    font-size: larger;
+    color:#ffffff;
+    width:150%;
+    background-color: #494949;
+    border-color:0.2rem silid #000000;
+    padding: 0.4em;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #ffffffaf,
+              0 0 .2rem #ffffff76,
+              0 0 2rem #fe9413,
+              0 0 0.8rem #fe9813,
+              0 0 2.8rem #028192,
+              inset 0 0 1.3rem #117d98;
+
+ 
+}
+/*when hovering over an image, to get  a neon border*/
+.bottom:hover {
+    max-width: 295px;
+    max-height: 295px;
+    border: 0.2rem solid #ffffff96;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #ffffffaf,
+              0 0 .2rem #ffffff76,
+              0 0 2rem #fe9413,
+              0 0 0.8rem #fe9813,
+              0 0 2.8rem #028192,
+              inset 0 0 1.3rem #117d98;
+}
+/*from this point forward we continue with professional and personal sections*/
+#professional_logos {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 20px;
+    animation: flicker 1.5s infinite alternate;
+    color:rgba(27, 100, 160, 0.716);
+}
+#github_logo {
+    margin-top: 50px;
+}
+/*personal page section*/
+#personal_page {
+    align-items: center;
+    width:400px;
+    margin-left: 38%;
+}
+#personal_text {
+    text-align: center;
+    font-size: larger;
+    color:#ffffff;
+    width:150%;
+    background-color: #494949;
+    border-color:0.2rem silid #000000;
+    padding: 0.4em;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #ffffffaf,
+              0 0 .2rem #ffffff76,
+              0 0 2rem #0eff1a,
+              0 0 0.8rem #2bfe13,
+              0 0 2.8rem #028192,
+              inset 0 0 1.3rem #117d98;
+}
+#instagram_logo {
+    margin-top: 20px;
+    width:100px;
+    border: 0.2rem solid #5e054296;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #d80707af,
+              0 0 .2rem #0909ef76,
+              0 0 2rem #2bfe13,
+              0 0 0.8rem #0ff522,
+              0 0 2.8rem #ff0b61,
+}
+#instagram_logo:hover {
+    max-width: 85px;
+    max-height: 85px;
+    border: 0.2rem solid #ffffff96;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #ffffffaf,
+              0 0 .2rem #ffffff76,
+              0 0 2rem #36fe13,
+              0 0 0.8rem #17fe13,
+              0 0 2.8rem #028192,
+              inset 0 0 1.3rem #117d98;
+}
+/*This part refers to consistent sections of the page meaning they will always be present*/
+.home_button {
+    font-size: 100px;
+    text-align: center;
+    /*making the text glow with some help from the outside*/
+    animation: flicker 1.5s infinite alternate;
+    color:rgba(238, 178, 87, 0.716);
+}
+.home_button:hover {
+    color:white;
+}
+#final {
+    color:white;
+    display: flex;
+    flex-direction: row;
+}
